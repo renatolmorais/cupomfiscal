@@ -14,12 +14,20 @@ ap.add_argument(
         )
 
 ap.add_argument(
-        "-p",
-        "--preprocess",
+        "-l",
+        "--lang",
         type=str,
-        default="thresh",
-        help="type of preprocessing to be done"
+        default="eng",
+        help="language to be used"
         )
+		
+ap.add_argument(
+		"-o",
+		"--out",
+		type=str,
+		default="output.txt",
+		help="output file"
+		)
 
 args = vars(ap.parse_args())
 

@@ -77,7 +77,7 @@ cv2.imwrite(filename, gray)
 
 try:
 	img = Image.open( filename )
-	readed = pytesseract.image_to_string( img )
+	readed = pytesseract.image_to_string( img, lang=lang )
 	with open( output, 'w' ) as fp: fp.write( readed.encode('utf-8') )
 except Exception as err:
-	print 'error!'
+	print err.message
